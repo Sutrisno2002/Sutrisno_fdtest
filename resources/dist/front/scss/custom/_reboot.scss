@@ -1,0 +1,319 @@
+//
+// reboot.scss
+//
+
+@layer components {
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+    html {
+        @apply relative scroll-smooth;
+
+        --tw-screen-sm: theme(screens.sm);
+        --tw-screen-md: theme(screens.md);
+        --tw-screen-lg: theme(screens.lg);
+        --tw-screen-xl: theme(screens.xl);
+    }
+
+    body {
+        @apply text-gray-500 text-[14px] sm:text-[16px] overflow-x-hidden;
+    }
+
+    // Fix event bubbling on iOS devices
+    @supports (-webkit-overflow-scrolling: touch) {
+        body {
+            cursor: pointer;
+        }
+    }
+
+    input,
+    textarea,
+    button,
+    select,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        @apply font-semibold;
+    }
+
+    .vertical-rl {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+
+    :root {
+        &:is([data-mode="dark"]) {
+            color-scheme: dark;
+        }
+    }
+
+    .container{
+        @apply w-11/12 sm:w-10/12 xl:max-w-[1400px];
+    }
+
+    .container-sm{
+        @apply w-11/12 ;
+    }
+
+    .primary{
+        @apply bg-primary text-white;
+    }
+
+    .dark{
+        @apply bg-dark text-white;
+    }
+
+    .secondary{
+        @apply bg-secondary text-white;
+    }
+
+    .light{
+        @apply bg-light text-dark;
+    }
+
+    .success{
+        @apply bg-success  text-white;
+    }
+
+    .warning{
+        @apply bg-warning text-white;
+    }
+
+    .info{
+        @apply bg-info text-white;
+    }
+
+    .danger{
+        @apply bg-danger text-white
+    }
+
+    .breadcrumb-minimal{
+        @apply transition-transform
+    }
+
+    .breadcrumb{
+        @apply flex items-center gap-2 mt-2 text-sm;
+
+        span{
+            @apply relative pr-2 whitespace-nowrap max-w-[30%] overflow-hidden text-ellipsis text-slate-500;
+
+            &:not(:last-child){
+                &::after{
+                    @apply absolute end-0 top-[50%] translate-y-[-50%] text-slate-400 right-[-2px];
+                    content: '•';
+                }
+            }
+
+            &:last-child{
+                @apply text-slate-500;
+            }
+        }
+    }
+
+    // Scrollbar
+    .scrollbar{
+        &.horizontal{
+            &::-webkit-scrollbar {
+                @apply h-1 transition transition-all;
+            }
+
+            &:hover{
+                &::-webkit-scrollbar {
+                    @apply bg-zinc-500 h-2;
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                @apply bg-zinc-200;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @apply bg-zinc-400 rounded-full;
+            }
+        }
+
+        &.vertical{
+            &::-webkit-scrollbar {
+                @apply w-1 transition transition-all;
+            }
+
+            &:hover{
+                &::-webkit-scrollbar {
+                    @apply bg-zinc-500 w-2;
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                @apply bg-zinc-200;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @apply bg-zinc-400 rounded-full;
+            }
+        }
+    }
+
+    // Skeleton Loading
+    .skeleton h1,
+    .skeleton {
+        pointer-events: none;
+        animation: skeleton .675s infinite alternate;
+    }
+
+    .skeleton img {
+        filter: grayscale(100) contrast(0%) brightness(1.8);
+    }
+
+    .skeleton h2,
+    .skeleton h3,
+    .skeleton h4,
+    .skeleton h5,
+    .skeleton h6,
+    .skeleton p,
+    .skeleton li,
+    .skeleton i,
+    .skeleton .btn,
+    .skeleton label,
+    .skeleton span,
+    .skeleton small,
+    .skeleton article,
+    .skeleton figure,
+    .skeleton button,
+    .skeleton .profile-avatar,
+    .skeleton input,
+    .skeleton iframe,
+    .skeleton select,
+    .skeleton textarea {
+        border-radius: 12px;
+        color: transparent !important;
+        appearance: none !important;
+        -webkit-appearance: none;
+        background-color: rgb(230, 230, 230) !important;
+        background-image: none !important;
+        border-color: rgb(230, 230, 230) !important;
+    }
+
+    .skeleton h1::placeholder,
+    .skeleton h2::placeholder,
+    .skeleton h3::placeholder,
+    .skeleton h4::placeholder,
+    .skeleton h5::placeholder,
+    .skeleton h6::placeholder,
+    .skeleton p::placeholder,
+    .skeleton li::placeholder,
+    .skeleton .btn::placeholder,
+    .skeleton label::placeholder,
+    .skeleton input::placeholder,
+    .skeleton select::placeholder,
+    .skeleton textarea::placeholder {
+        color: transparent;
+    }
+
+    .non-active {
+        &.block-events::after {
+            pointer-events: unset;
+        }
+
+        &::after {
+            content: '';
+            @apply absolute w-full h-full top-0 left-0 opacity-25 z-10 pointer-events-none bg-slate-400;
+        }
+
+    }
+
+    @keyframes skeleton {
+        from {
+            opacity: 0.4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    // Pagination
+    .pagination{
+        @apply flex items-center flex-wrap justify-center mt-14;
+    }
+
+    .circular-progress {
+        --size: 32px;
+        --half-size: calc(var(--size) / 2);
+        --stroke-width: 4px;
+        --radius: calc((var(--size) - var(--stroke-width)) / 2);
+        --circumference: calc(var(--radius) * pi * 2);
+        --dash: calc((var(--progress) * var(--circumference)) / 100);
+        --primary: theme(backgroundColor.primary);
+        animation: progress-animation 5s linear 0s 1 forwards;
+    }
+
+    .circular-progress circle {
+        cx: var(--half-size);
+        cy: var(--half-size);
+        r: var(--radius);
+        stroke-width: var(--stroke-width);
+        fill: none;
+        stroke-linecap: round;
+    }
+
+    .circular-progress circle.bg {
+        stroke: #ddd;
+    }
+
+    .circular-progress circle.fg {
+        transform: rotate(-90deg);
+        transform-origin: var(--half-size) var(--half-size);
+        stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+        transition: stroke-dasharray 0.3s linear 0s;
+        stroke: var(--primary);
+    }
+
+    @property --progress {
+        syntax: "<number>";
+        inherits: false;
+        initial-value: 0;
+    }
+
+    @keyframes progress-animation {
+        from {
+            --progress: 0;
+        }
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+
+    .rating > label {
+        @apply text-slate-300;
+    }
+
+    .rating > label:before {
+        @apply text-2xl;
+        font-family: BoxIcons;
+        content: "\eeb8";
+        display: inline-block;
+    }
+
+    .rating > input {
+        display: none;
+    }
+
+    .rating > input:checked ~ label,
+    .rating:not(:checked) > label:hover,
+    .rating:not(:checked) > label:hover ~ label {
+        @apply text-yellow-300;
+    }
+
+    .rating > input:checked + label:hover,
+    .rating > input:checked ~ label:hover,
+    .rating > label:hover ~ input:checked ~ label,
+    .rating > input:checked ~ label:hover ~ label {
+        @apply text-yellow-400;
+    }
+}
+
+

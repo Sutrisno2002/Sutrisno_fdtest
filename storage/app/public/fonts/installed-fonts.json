@@ -1,0 +1,29 @@
+{
+    "bonheurroyale": {
+        "normal": "bonheurroyale_normal_96cb4b4061d1982e3c341cf23d34e456"
+    },
+    "playfair": {
+        "normal": "playfair_normal_3c8363931533a58a5790496e368bc3f5"
+    },
+    "plusjakarta": {
+        "normal": "plusjakarta_normal_372490267981c100108455df59f33a27"
+    },
+    "plusjakarta-bold": {
+        "normal": "plusjakarta_bold_normal_638e9d07acc0c8f4b2390850b168affb"
+    },
+    "roboto": {
+        "normal": "roboto_normal_62410f2c11f76527acc612a7d1c7364a"
+    },
+    "bebas neue": {
+        "normal": "bebas_neue_normal_a2fae227d28c62e8d23cbd15b2544e77"
+    },
+    "barlowcondensed-semibold": {
+        "normal": "barlowcondensed_semibold_normal_2bced2c649ad578d557cbfa11554f5a6"
+    },
+    "barlowcondensed-medium": {
+        "normal": "barlowcondensed_medium_normal_51925d7e30a077e486f57a14e1730c5f"
+    },
+    "barlowcondensed-light": {
+        "normal": "barlowcondensed_light_normal_718d77f611a38f64b70ea970ad7d4760"
+    }
+}

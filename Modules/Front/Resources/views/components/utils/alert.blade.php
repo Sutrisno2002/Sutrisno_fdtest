@@ -1,0 +1,26 @@
+@php
+    $dismissable = isset($dismissable) ? 'dismissable' : '';
+    $attributes = $attributes->merge(['class' => 'alert ' . $dismissable]);
+@endphp
+
+<div class="{{ $attributes['class'] }}" role="alert" wire:ignore>
+    <div class="flex">
+        @isset($icon)
+            <div class="flex-shrink-0 mr-2 mt-1">
+                <i class="{{ $icon }} text-xl"></i>
+            </div>
+        @endisset
+        <div class="ms-4">
+            @isset($title)
+                <h2 class="font-semibold text-xl">{{ $title }}</h2>
+            @endisset
+            <p class="text-sm font-light">{{ $slot }}</p>
+        </div>
+    </div>
+
+    @if ($dismissable)
+        <button onclick="this.parentNode.remove()" class="dismiss">
+            <i class="bx bx-x text-md"></i>
+        </button>
+    @endif
+</div>

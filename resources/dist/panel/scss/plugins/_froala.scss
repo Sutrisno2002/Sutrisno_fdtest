@@ -1,0 +1,127 @@
+//
+// Froala
+//
+
+a[href*="https://www.froala.com"] {
+    display: none !important;
+}
+
+.fr-toolbar.fr-top,
+.fr-wrapper {
+    border: 0 !important;
+    border-radius: 0 !important
+}
+
+.fr-box .fr-wrapper {
+    padding: 20px 8px 0 !important;
+
+    .fr-element.fr-view {
+        padding: 0;
+
+        ol,
+        ul,
+        menu {
+            list-style: inherit;
+            padding-left: 16px;
+        }
+
+        a {
+            all: unset
+        }
+    }
+
+    &.show-placeholder .fr-placeholder {
+        padding: 20px 8px !important
+    }
+}
+
+.fr-toolbar svg.fr-svg,
+.fr-popup .fr-command.fr-btn svg.fr-svg,
+.fr-modal .fr-command.fr-btn svg.fr-svg {
+    @apply h-5 m-0 p-1;
+}
+
+.fr-toolbar .fr-command.fr-btn,
+.fr-popup .fr-command.fr-btn,
+.fr-modal .fr-command.fr-btn {
+    @apply h-auto p-2;
+}
+
+.fr-toolbar .fr-btn-grp {
+    margin: 0 .5rem 0 0 !important;
+}
+
+.fr-toolbar .fr-command.fr-btn.fr-open {
+    margin-top: 0 !important
+}
+
+.fr-toolbar .fr-more-toolbar.fr-expanded {
+    @apply flex items-center;
+    padding: 0 !important;
+
+    .fr-command.fr-btn {
+        @apply h-7;
+
+        svg {
+            margin: auto 11px auto 3px;
+        }
+
+        &.fr-dropdown:after {
+            @apply top-3;
+        }
+    }
+}
+
+.fr-quick-insert a.fr-floating-btn,
+.fr-qi-helper a.fr-floating-btn,
+.fr-qi-helper a.fr-btn {
+    height: unset !important;
+    width: unset !important;
+    padding: 8px !important;
+
+    svg {
+        margin: 0 !important;
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+    }
+}
+
+button[data-cmd="imageManager"],
+button[data-cmd="videoUpload"] {
+    display: none !important;
+}
+
+
+.fr-toolbar.fr-top,
+.fr-box.fr-basic .fr-wrapper{
+    background: transparent !important;
+}
+
+html[data-mode="dark"]{
+
+    .fr-box a.fr-floating-btn{
+        @apply bg-gray-700;
+
+        svg path{
+            fill: var(--tw-body-color);
+        }
+    }
+
+    .fr-toolbar .fr-command.fr-btn svg path, .fr-popup .fr-command.fr-btn svg path, .fr-modal .fr-command.fr-btn svg path{
+        fill: var(--tw-body-color);
+    }
+
+    .fr-desktop .fr-command:hover:not(.fr-table-cell), .fr-desktop .fr-command:focus:not(.fr-table-cell), .fr-desktop .fr-command.fr-btn-hover:not(.fr-table-cell), .fr-desktop .fr-command.fr-expanded:not(.fr-table-cell){
+        @apply bg-gray-700;
+    }
+
+    .fr-box .fr-wrapper .fr-element.fr-view{
+        @apply text-gray-400;
+    }
+
+    .fr-toolbar .fr-newline,
+    .fr-toolbar .fr-command.fr-btn.fr-open:not(:hover):not(:focus):not(:active),
+    .fr-toolbar .fr-more-toolbar{
+        @apply bg-gray-700;
+    }
+}

@@ -1,0 +1,77 @@
+body{
+    .breadcrum-minimal .container,
+    .sidebar-content {
+        @apply transition-all;
+    }
+
+    &.sidebar-filter-show {
+        @apply w-screen overflow-x-hidden;
+
+        .sidebar-outer {
+            @apply translate-x-0
+        }
+
+        .breadcrum-minimal {
+            @apply w-screen overflow-x-hidden;
+        }
+
+        .breadcrum-minimal .container,
+        .sidebar-content {
+            @apply translate-x-72;
+        }
+    }
+}
+
+.sidebar-filter {
+    @apply relative;
+
+    .sidebar-outer {
+        @apply fixed top-0 bottom-0 z-[45] -translate-x-full transition-transform bg-gray-50 pt-36;
+
+        .sidebar-wrapper {
+            @apply h-screen w-72 px-6 overflow-y-auto;
+        }
+    }
+
+    .sidebar-content {
+        @apply grid transition-transform;
+    }
+}
+
+
+// body {
+
+
+//     &.sidebar-filter-show{
+//         @apply w-screen overflow-x-hidden;
+
+//         .sidebar-outer{
+//             @apply translate-x-0
+//         }
+
+//         .breadcrum-minimal{
+//             @apply w-screen overflow-x-hidden;
+//         }
+
+//         .breadcrum-minimal .container,
+//         .sidebar-content {
+//             @apply translate-x-72;
+//         }
+//     }
+
+//     .sidebar-filter{
+//         @apply relative;
+
+//         .sidebar-outer{
+//             @apply fixed top-0 bottom-0 z-[45] -translate-x-full transition-transform bg-gray-50 pt-36;
+
+//             .sidebar-wrapper{
+//                 @apply h-screen w-72 px-6 overflow-y-auto;
+//             }
+//         }
+
+//         .sidebar-content{
+//             @apply grid transition-transform;
+//         }
+//     }
+// }

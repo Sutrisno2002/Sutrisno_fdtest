@@ -1,0 +1,11 @@
+{
+    "Core": true,
+    "Front": true,
+    "Administrator": true,
+    "Common": true,
+    "ECommerce": false,
+    "Customer": false,
+    "Notification": false,
+    "Course": false,
+    "Volunteers": true
+}

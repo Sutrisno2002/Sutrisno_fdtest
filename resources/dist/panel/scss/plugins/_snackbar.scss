@@ -1,0 +1,74 @@
+//
+// Snackbar
+//
+
+.snackbar-pos.top-center{
+    @apply shadow-xl rounded-lg;
+
+    background: rgb(31 41 55 /1) !important;
+    width: 95% !important;
+    max-width: 500px;
+    margin: 20px auto auto;
+
+    p{
+        width: 100%;
+    }
+
+    .inner{
+        @apply flex w-full rounded-lg shadow text-gray-400;
+
+        .icon-wrapper{
+            @apply inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg;
+
+            .icon-box{
+                @apply h-5 w-5 flex items-center justify-center rounded-full;
+            }
+        }
+
+        .text{
+            @apply ml-2 pl-2 font-normal self-center;
+        }
+
+        &.snackbar-success{
+            .icon-wrapper{
+                @apply bg-green-100 dark:bg-green-800 dark:text-green-200;
+
+                .icon-box{
+                    @apply bg-green-500;
+                }
+
+                i{
+                    @apply text-green-100;
+                }
+            }
+        }
+
+        &.snackbar-warning{
+            .icon-wrapper{
+                @apply bg-orange-100  dark:bg-orange-800 dark:text-orange-200;
+
+                .icon-box{
+                    @apply bg-orange-500;
+                }
+
+                i{
+                    @apply text-orange-100;
+                }
+            }
+        }
+
+        &.snackbar-error{
+            .icon-wrapper{
+                @apply bg-red-100  dark:bg-red-800 dark:text-red-200;
+
+                .icon-box{
+                    @apply bg-red-500;
+                }
+
+                i{
+                    @apply text-red-100;
+                }
+            }
+        }
+    }
+}

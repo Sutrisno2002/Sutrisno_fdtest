@@ -1,0 +1,135 @@
+@layer components {
+
+    .input-group{
+        @apply flex;
+
+        &.prepend{
+            .text{
+                @apply inline-flex items-center px-4 rounded rounded-e-none border border-e-0 border-gray-200 text-gray-500 bg-slate-100 dark:bg-slate-700 dark:text-gray-400 dark:border-gray-700;
+            }
+
+            .form-input{
+                @apply rounded-s-none border-s-0;
+
+                &:focus{
+                    &~.text{
+                        @apply border-gray-200 dark:border-gray-700;
+                    }
+                }
+            }
+        }
+
+        &.append{
+            .form-input{
+                @apply rounded-e-none border-e-0;
+
+                &:focus{
+                    &~.text{
+                        @apply border-gray-200 dark:border-gray-700;
+                    }
+                }
+            }
+
+            .text{
+                @apply inline-flex items-center px-4 rounded rounded-s-none border border-s-0 border-gray-200 text-gray-500 bg-slate-100 dark:bg-slate-700 dark:text-gray-400 dark:border-gray-700;
+            }
+        }
+
+        &.both{
+            .form-input{
+                @apply rounded-none border-s-0 border-e-0;
+
+                &:focus{
+                    &~.text{
+                        @apply border-gray-200 dark:border-gray-700;
+                    }
+                }
+            }
+
+            .text.left{
+                @apply inline-flex items-center px-3 rounded-s border border-e-0 border-gray-200 text-gray-500 bg-slate-100 dark:bg-slate-700 dark:text-gray-400 dark:border-gray-700;
+            }
+
+            .text.right{
+                @apply inline-flex items-center px-3 rounded-e border border-gray-200 text-gray-500 bg-slate-100 dark:bg-slate-700 dark:text-gray-400 dark:border-gray-700;
+            }
+        }
+
+    }
+
+    .form-checkbox,
+    .form-radio {
+        @apply bg-inherit cursor-pointer border-gray-300 dark:border-gray-600 dark:checked:border-transparent focus:ring-0 focus:ring-offset-0;
+    }
+
+
+    .form-group {
+        @apply mb-4;
+
+        label {
+            @apply block text-sm font-medium mb-1 text-gray-600;
+        }
+    }
+
+    .form-input {
+        @apply py-2 px-4 leading-6 block w-full border-gray-200 rounded text-sm focus:border-gray-200 focus:ring-0;
+    }
+
+    .btn{
+        @apply text-[75%] sm:text-base leading-6 text-center align-middle select-none py-3 px-4 text-base rounded-md;
+
+
+        &.block{
+            @apply w-full;
+        }
+
+        &.primary{
+            @apply bg-primary text-white transition-all hover:shadow-lg hover:shadow-primary/30;
+        }
+
+        &.danger{
+            @apply bg-danger text-white transition-all hover:shadow-lg hover:shadow-danger/30;
+        }
+
+        &.warning{
+            @apply bg-warning text-white transition-all hover:shadow-lg hover:shadow-warning/30;
+        }
+
+        &.info{
+            @apply bg-info text-white transition-all hover:shadow-lg hover:shadow-info/30;
+        }
+
+        &.light{
+            @apply bg-slate-100 text-slate-700 transition-all hover:shadow-lg hover:shadow-light/30;
+        }
+
+        &.dark{
+            @apply bg-dark text-slate-100 transition-all hover:shadow-lg hover:shadow-light/30;
+        }
+
+        &.outline-primary{
+            @apply border border-primary hover:bg-primary text-primary hover:text-white transition-all hover:shadow-lg hover:shadow-primary/30;
+        }
+
+        &.outline-danger{
+            @apply border border-danger hover:bg-danger text-danger hover:text-white transition-all hover:shadow-lg hover:shadow-danger/30;
+        }
+
+        &.outline-warning{
+            @apply border border-warning hover:bg-warning text-warning hover:text-white transition-all hover:shadow-lg hover:shadow-warning/30;
+        }
+
+        &.outline-info{
+            @apply border border-info hover:bg-info text-info hover:text-white transition-all hover:shadow-lg hover:shadow-info/30;
+        }
+
+        &.outline-light{
+            @apply border border-slate-100 hover:bg-slate-100 text-slate-700 transition-all hover:shadow-lg hover:shadow-light/30;
+        }
+
+        &.outline-dark{
+            @apply border border-dark hover:bg-dark text-dark hover:text-slate-100 transition-all hover:shadow-lg hover:shadow-light/30;
+        }
+    }
+
+}

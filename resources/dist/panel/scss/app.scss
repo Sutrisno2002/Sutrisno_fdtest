@@ -1,0 +1,62 @@
+/*
+Version: 3.0
+Author: SOC Software House
+*/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Custom Variables
+@import "config/variables";
+@import "config/theme-config";
+
+// Structure
+@import "structure/sidenav";
+@import "structure/topbar";
+
+// Components
+@import "components/reboot";
+@import "components/buttons";
+@import "components/badge";
+@import "components/card";
+@import "components/forms";
+@import "components/print";
+@import "components/helper";
+@import "components/colors";
+@import "components/alert";
+
+// Plugins (Extended UI Components)
+@import "plugins/cropper";
+@import "plugins/swiper";
+@import "plugins/simplebar";
+@import "plugins/prismjs";
+@import "plugins/sweetalert2";
+@import "plugins/sortablejs";
+@import "plugins/tour";
+@import "plugins/glightbox";
+@import "plugins/tippy-tooltip";
+
+// Chart Plugins
+@import "plugins/apexcharts";
+
+// Advanced Form Plugins
+@import "plugins/dropzone";
+@import "plugins/range-slider";
+@import "plugins/flatpicker";
+@import "plugins/colorpicker";
+@import "plugins/choices";
+@import "plugins/froala";
+@import "plugins/tagify";
+@import "plugins/snackbar";
+
+// Data Table
+@import "plugins/gridjs";
+
+// Map Plugins
+@import "plugins/vector-maps";
+@import "plugins/google-map";
+
+// App Pages Plugins
+@import "plugins/fullcalendar";
+@import "plugins/daterangepicker";

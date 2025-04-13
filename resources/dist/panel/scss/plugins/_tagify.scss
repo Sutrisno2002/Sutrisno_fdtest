@@ -1,0 +1,12 @@
+//
+// Tagify
+//
+
+.form-input.tagify{
+    @apply font-normal rounded block w-full border-gray-200 text-sm focus:border-gray-300
+    focus:ring-0 bg-transparent dark:border-gray-700 dark:text-gray-400;
+
+    &.tagify--focus{
+        @apply border-gray-300 ring-0 bg-transparent dark:border-gray-700 dark:text-gray-400
+    }
+}

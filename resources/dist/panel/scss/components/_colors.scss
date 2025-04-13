@@ -1,0 +1,65 @@
+@layer components {
+    .primary {
+        @apply bg-primary text-white;
+    }
+
+    .secondary {
+        @apply bg-secondary text-white;
+    }
+
+    .info {
+        @apply bg-info text-white;
+    }
+
+    .success {
+        @apply bg-success text-white;
+    }
+
+    .danger {
+        @apply bg-danger text-white;
+    }
+
+    .warning {
+        @apply bg-warning text-white;
+    }
+
+    .dark {
+        @apply bg-dark text-white;
+    }
+
+    .light {
+        @apply bg-light text-dark/70;
+    }
+
+    .soft-primary {
+        @apply bg-primary/25 text-primary dark:text-white/70;
+    }
+
+    .soft-secondary {
+        @apply bg-secondary/25 text-secondary dark:text-white/70;
+    }
+
+    .soft-info {
+        @apply bg-info/25 text-info dark:text-white/70;
+    }
+
+    .soft-success {
+        @apply bg-success/25 text-success dark:text-white/70;
+    }
+
+    .soft-danger {
+        @apply bg-danger/25 text-danger dark:text-white/70;
+    }
+
+    .soft-warning {
+        @apply bg-warning/25 text-warning dark:text-white/70;
+    }
+
+    .soft-dark {
+        @apply bg-dark/25 text-dark dark:text-white/70;
+    }
+
+    .soft-light {
+        @apply bg-light/25 dark:text-white/70 dark:bg-white/10;
+    }
+}

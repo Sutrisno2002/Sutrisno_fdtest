@@ -1,0 +1,122 @@
+[{
+        "parent_id": null,
+        "name": "Beranda",
+        "url": "/",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "navbar",
+        "sort_order": "1",
+        "is_active": "1"
+    },
+    {
+        "parent_id": null,
+        "name": "Tentang Kami",
+        "url": "/tentang-kami",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "navbar",
+        "sort_order": "2",
+        "is_active": "1"
+    },
+    {
+        "parent_id": null,
+        "name": "Statistik",
+        "url": "/statistik",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "navbar",
+        "sort_order": "3",
+        "is_active": "1"
+    },
+    {
+        "parent_id": null,
+        "name": "Artikel",
+        "url": "/artikel",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "navbar",
+        "sort_order": "4",
+        "is_active": "1"
+    },
+    {
+        "parent_id": null,
+        "name": "Hubungi Kami",
+        "url": "/hubungi-kami",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "navbar",
+        "sort_order": "5",
+        "is_active": "1"
+    },
+    {
+        "parent_id": null,
+        "name": "Utama",
+        "url": "/",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "1",
+        "is_active": "1"
+    },
+    {
+        "parent_id": 6,
+        "name": "Beranda",
+        "url": "/",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "1",
+        "is_active": "1"
+    },
+    {
+        "parent_id": 6,
+        "name": "Tentang Kami",
+        "url": "/tentang-kami",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "2",
+        "is_active": "1"
+    },
+    {
+        "parent_id": 6,
+        "name": "Statistik",
+        "url": "/statistik",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "3",
+        "is_active": "1"
+    },
+    {
+        "parent_id": 6,
+        "name": "Artikel",
+        "url": "/artikel",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "4",
+        "is_active": "1"
+    },
+    {
+        "parent_id": 6,
+        "name": "Hubungi Kami",
+        "url": "/hubungi-kami",
+        "icon": null,
+        "active_state": "active",
+        "module": "Front",
+        "placement": "footer",
+        "sort_order": "5",
+        "is_active": "1"
+    }
+]

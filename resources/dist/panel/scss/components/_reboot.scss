@@ -1,0 +1,200 @@
+//
+// reboot.scss
+//
+
+html {
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    color: $body-color;
+    background-color: $body-bg;
+    font-family: $body-font-family;
+    -webkit-tap-highlight-color: transparent;
+    @apply antialiased font-normal text-sm leading-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-semibold;
+}
+
+code {
+    @apply text-sky-500;
+}
+
+:root {
+    &:is([data-mode="dark"]) {
+        color-scheme: dark;
+    }
+}
+
+.form-input,
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Skeleton Loading
+.skeleton h1,
+.skeleton {
+    pointer-events: none;
+    animation: skeleton 0.675s infinite alternate;
+}
+
+.skeleton img {
+    filter: grayscale(100) contrast(0%) brightness(1.8);
+}
+
+.skeleton h2,
+.skeleton h3,
+.skeleton h4,
+.skeleton h5,
+.skeleton h6,
+.skeleton p,
+.skeleton li,
+.skeleton i,
+.skeleton .btn,
+.skeleton label,
+.skeleton span,
+.skeleton small,
+.skeleton article,
+.skeleton figure,
+.skeleton button,
+.skeleton .profile-avatar,
+.skeleton input,
+.skeleton iframe,
+.skeleton select,
+.skeleton textarea {
+    border-radius: 12px;
+    color: transparent !important;
+    appearance: none !important;
+    -webkit-appearance: none;
+    background-color: rgb(230, 230, 230) !important;
+    background-image: none !important;
+    border-color: rgb(230, 230, 230) !important;
+}
+
+.skeleton h1::placeholder,
+.skeleton h2::placeholder,
+.skeleton h3::placeholder,
+.skeleton h4::placeholder,
+.skeleton h5::placeholder,
+.skeleton h6::placeholder,
+.skeleton p::placeholder,
+.skeleton li::placeholder,
+.skeleton .btn::placeholder,
+.skeleton label::placeholder,
+.skeleton input::placeholder,
+.skeleton select::placeholder,
+.skeleton textarea::placeholder {
+    color: transparent;
+}
+
+.non-active {
+    &.block-events::after {
+        pointer-events: unset;
+    }
+
+    &::after {
+        content: "";
+        @apply absolute w-full h-full top-0 left-0 opacity-25 z-10 pointer-events-none bg-slate-400;
+    }
+}
+
+@keyframes skeleton {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.circular-progress {
+    --size: 32px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 4px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+    --primary: theme(backgroundColor.primary);
+    animation: progress-animation 5s linear 0s 1 forwards;
+}
+
+.circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+    stroke: #ddd;
+}
+
+.circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: var(--primary);
+}
+
+@property --progress {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@keyframes progress-animation {
+    from {
+        --progress: 0;
+    }
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: auto;
+}
+
+.rating > label {
+    @apply text-slate-300;
+}
+
+.rating > label:before {
+    @apply text-2xl;
+    font-family: BoxIcons;
+    content: "\eeb8";
+    display: inline-block;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    @apply text-yellow-300;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+    @apply text-yellow-400;
+}

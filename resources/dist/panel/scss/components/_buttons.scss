@@ -1,0 +1,69 @@
+//
+// buttons.scss
+//
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center text-center rounded border border-transparent px-4 py-2 text-sm transition-all font-medium;
+
+        &.btn-lg {
+            @apply px-5 py-3 text-base;
+        }
+
+        &.btn-sm {
+            @apply px-3.5 py-1.5 text-xs;
+        }
+
+        &.block{
+            @apply w-full;
+        }
+
+        &.primary{
+            @apply bg-primary/90 text-white transition-all hover:bg-primary;
+        }
+
+        &.danger{
+            @apply bg-danger/90 text-white transition-all hover:bg-danger;
+        }
+
+        &.warning{
+            @apply bg-warning/90 text-white transition-all hover:bg-warning;
+        }
+
+        &.info{
+            @apply bg-info/90 text-white transition-all hover:bg-info;
+        }
+
+        &.light{
+            @apply bg-slate-100/90 text-slate-700 transition-all hover:bg-slate-200;
+        }
+
+        &.dark{
+            @apply bg-dark/90 text-slate-100 transition-all hover:bg-dark;
+        }
+
+        &.outline-primary{
+            @apply border border-primary hover:bg-primary text-primary hover:text-white transition-all;
+        }
+
+        &.outline-danger{
+            @apply border border-danger hover:bg-danger text-danger hover:text-white transition-all;
+        }
+
+        &.outline-warning{
+            @apply border border-warning hover:bg-warning text-warning hover:text-white transition-all;
+        }
+
+        &.outline-info{
+            @apply border border-info hover:bg-info text-info hover:text-white transition-all;
+        }
+
+        &.outline-light{
+            @apply border border-slate-100 hover:bg-slate-100 text-slate-700 transition-all;
+        }
+
+        &.outline-dark{
+            @apply border border-dark hover:bg-dark text-dark hover:text-slate-100 transition-all;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+//
+// _daterangepicker.scss
+//
+
+.daterangepicker{
+    @apply shadow transition-all transition-transform;
+    font-size: 1rem !important;
+    font-family: unset !important;
+    padding: .675rem !important;
+
+    .ranges {
+        ul{
+            @apply grid gap-0.5
+        }
+        li{
+            @apply rounded;
+
+            &.active{
+                --tw-bg-opacity: 1;
+                background-color: rgb(48 115 241 / var(--tw-bg-opacity)) !important;
+            }
+        }
+    }
+
+    &.show-calendar{
+        .ranges {
+            ul{
+                @apply pr-2 sm:border-r
+            }
+         }
+    }
+
+    &.show-ranges .drp-calendar.left{
+        border: 0 !important;
+    }
+
+    td.in-range,
+    td.in-range:hover{
+        --tw-bg-opacity: .05;
+        background-color: rgb(48 115 241 / var(--tw-bg-opacity)) !important;
+    }
+
+    td.active,
+    td.active:hover{
+        --tw-bg-opacity: 1;
+        background-color: rgb(48 115 241 / var(--tw-bg-opacity)) !important;
+    }
+}

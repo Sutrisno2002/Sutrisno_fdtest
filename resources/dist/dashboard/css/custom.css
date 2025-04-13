@@ -1,0 +1,80 @@
+/* Write your custom CSS here */
+
+.note-editor .note-editing-area .note-editable {
+    background-color: white;
+}
+
+/* Skeleton Loading */
+.skeleton h1,
+.skeleton h2,
+.skeleton h3,
+.skeleton h4,
+.skeleton h5,
+.skeleton h6,
+.skeleton p,
+.skeleton li,
+.skeleton .btn,
+.skeleton label,
+.skeleton span,
+.skeleton small,
+.skeleton article,
+.skeleton figure,
+.skeleton button,
+.skeleton tr,
+.skeleton .profile-avatar,
+.skeleton .form-control {
+    border-radius: 12px;
+    color: transparent !important;
+    appearance: none !important;
+    -webkit-appearance: none;
+    background-color: rgb(230, 230, 230) !important;
+    background-image: none !important;
+    border-color: rgb(230, 230, 230) !important;
+}
+
+.skeleton h1::placeholder,
+.skeleton h2::placeholder,
+.skeleton h3::placeholder,
+.skeleton h4::placeholder,
+.skeleton h5::placeholder,
+.skeleton h6::placeholder,
+.skeleton p::placeholder,
+.skeleton li::placeholder,
+.skeleton .btn::placeholder,
+.skeleton label::placeholder,
+.skeleton .form-control::placeholder {
+    color: transparent;
+}
+
+@keyframes skeleton {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.skeleton {
+    pointer-events: none;
+    animation: skeleton 1s infinite alternate;
+}
+
+.skeleton img {
+    filter: grayscale(100) contrast(0%) brightness(1.8);
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.cursor-grab {
+    cursor: grab !important;
+}
+
+.logo-box {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

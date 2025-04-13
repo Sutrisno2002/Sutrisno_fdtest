@@ -1,0 +1,19 @@
+//
+// Cropper Js
+//
+
+$white: #d7d7d7;
+
+.cropper-point {
+    background-color: $white !important;
+    border-radius: 5px
+}
+
+.cropper-view-box {
+    outline-color: $white !important;
+}
+
+.cropper-dashed {
+    border-style: solid !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}

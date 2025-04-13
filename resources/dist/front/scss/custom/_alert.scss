@@ -1,0 +1,54 @@
+@layer components {
+    .alert {
+        @apply text-sm rounded-md p-4 relative;
+
+        p{
+            @apply opacity-75;
+        }
+
+        &.dismissable {
+            @apply pe-12;
+        }
+
+        &.soft-primary {
+            @apply border border-primary/50;
+        }
+
+        &.soft-secondary {
+            @apply border border-secondary/50;
+        }
+
+        &.soft-info {
+            @apply border border-info/50;
+        }
+
+        &.soft-success {
+            @apply border border-success/50;
+        }
+
+        &.soft-danger {
+            @apply border border-danger/50;
+        }
+
+        &.soft-warning {
+            @apply border border-warning/50;
+        }
+
+        &.soft-dark {
+            @apply border border-dark/50 dark:border-white/20;
+        }
+
+        &.soft-light {
+            @apply border border-gray-200 dark:border-gray-500;
+        }
+
+        .dismiss {
+            @apply absolute h-5 w-5 rounded-full bg-gray-200 flex justify-center items-center right-4 top-4 opacity-50 text-dark;
+
+            i {
+                @apply text-sm;
+            }
+        }
+    }
+
+}
